@@ -1,0 +1,46 @@
+name: Dhaka Transit CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Rebuild and validate Dhaka GTFS feed
+        working-directory: backend
+        run: |
+          python -m pipeline.build_gtfs
+          python -m pipeline.validate_feed --strict
+
+      - name: Load SQLite database from GTFS
+        run: python database/load_gtfs.py --feed data/gtfs/dhaka --db dhaka_transit.sqlite
+
+      - name: Run pytest suite
+        run: pytest -v
+
+      - name: Check frontend JavaScript syntax
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate ES modules with node --check
+        run: |
+          for f in frontend/js/*.js; do
+            node --check "$f"
+          done

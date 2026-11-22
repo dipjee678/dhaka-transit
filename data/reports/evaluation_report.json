@@ -1,0 +1,213 @@
+{
+ "generated_at": "2026-11-23T00:29:12",
+ "real_dhaka": {
+  "feed_version": "0.2.0-phase2",
+  "stations": 16,
+  "queries_run": 720,
+  "graph_stats": {
+   "nodes": 64,
+   "stop_nodes": 32,
+   "route_stop_nodes": 32,
+   "edges": 126,
+   "edges_by_kind": {
+    "board": 32,
+    "walk": 32,
+    "alight": 32,
+    "ride": 30
+   },
+   "routes": 1
+  },
+  "timetable_sat_stats": {
+   "patterns": 2,
+   "trips": 185,
+   "served_stops": 32,
+   "footpaths": 32
+  },
+  "timetable_fri_stats": {
+   "patterns": 2,
+   "trips": 86,
+   "served_stops": 32,
+   "footpaths": 32
+  },
+  "route_agreement_pct": 100.0,
+  "raptor_latency_ms": {
+   "count": 720,
+   "mean": 0.09,
+   "p50": 0.081,
+   "p95": 0.165,
+   "max": 0.313
+  },
+  "dijkstra_latency_ms": {
+   "count": 720,
+   "mean": 0.1,
+   "p50": 0.091,
+   "p95": 0.18,
+   "max": 0.444
+  },
+  "raptor_duration_s": {
+   "count": 720,
+   "mean": 1175.125,
+   "p50": 1077.0,
+   "p95": 2276.0,
+   "max": 2880.0
+  },
+  "dijkstra_duration_s": {
+   "count": 720,
+   "mean": 1168.571,
+   "p50": 1039.0,
+   "p95": 2246.0,
+   "max": 2601.0
+  },
+  "abs_duration_diff_s": {
+   "count": 720,
+   "mean": 155.971,
+   "p50": 176.0,
+   "p95": 291.0,
+   "max": 291.0
+  },
+  "max_transfers_raptor": 0,
+  "max_transfers_dijkstra": 0,
+  "featured_corridors": [
+   {
+    "od": "Mirpur 10 -> Motijheel",
+    "raptor_duration_min": 28.0,
+    "dijkstra_duration_min": 29.2,
+    "raptor_departure": "08:30:00",
+    "raptor_arrival": "08:58:00",
+    "transfers": 0,
+    "raptor_ms": 0.116,
+    "dijkstra_ms": 0.15,
+    "same_route": true,
+    "estimated": true
+   },
+   {
+    "od": "Uttara North -> Motijheel",
+    "raptor_duration_min": 48.0,
+    "dijkstra_duration_min": 43.3,
+    "raptor_departure": "08:30:00",
+    "raptor_arrival": "09:18:00",
+    "transfers": 0,
+    "raptor_ms": 0.118,
+    "dijkstra_ms": 0.135,
+    "same_route": true,
+    "estimated": true
+   },
+   {
+    "od": "Pallabi -> Farmgate",
+    "raptor_duration_min": 26.1,
+    "dijkstra_duration_min": 21.4,
+    "raptor_departure": "08:30:00",
+    "raptor_arrival": "08:56:05",
+    "transfers": 0,
+    "raptor_ms": 0.117,
+    "dijkstra_ms": 0.105,
+    "same_route": true,
+    "estimated": true
+   },
+   {
+    "od": "Agargaon -> Dhaka University",
+    "raptor_duration_min": 12.8,
+    "dijkstra_duration_min": 17.1,
+    "raptor_departure": "08:30:00",
+    "raptor_arrival": "08:42:51",
+    "transfers": 0,
+    "raptor_ms": 0.077,
+    "dijkstra_ms": 0.081,
+    "same_route": true,
+    "estimated": true
+   },
+   {
+    "od": "Motijheel -> Uttara North",
+    "raptor_duration_min": 43.4,
+    "dijkstra_duration_min": 43.4,
+    "raptor_departure": "08:30:00",
+    "raptor_arrival": "09:13:21",
+    "transfers": 0,
+    "raptor_ms": 0.09,
+    "dijkstra_ms": 0.108,
+    "same_route": true,
+    "estimated": true
+   }
+  ],
+  "osm_bus_access_egress_samples": [
+   {
+    "od": "Mirpur 10 Circle Bus stop -> City Centre(Janata Bank)",
+    "legs": [
+     "walk",
+     "metro",
+     "walk"
+    ],
+    "total_min": 30.6,
+    "walk_m": 386.0,
+    "same_route": true
+   },
+   {
+    "od": "Leguna Tempu Stand -> Shahbag P.G. Hospital Bus stop, Shahbagh Rd, Dhaka",
+    "legs": [
+     "walk",
+     "metro",
+     "walk"
+    ],
+    "total_min": 14.5,
+    "walk_m": 442.0,
+    "same_route": true
+   }
+  ],
+  "calendar_checks": {
+   "friday_0830_first_arrival": "15:38:00",
+   "saturday_2330_fallback_algorithm": "dijkstra",
+   "saturday_2330_outside_hours_flag": true
+  }
+ },
+ "astar_walking": [
+  {
+   "grid": "20x20 (with barrier)",
+   "nodes": 384,
+   "distance_m": 3712.6,
+   "astar_expanded": 325,
+   "dijkstra_expanded": 381,
+   "expansion_reduction_pct": 14.7,
+   "astar_ms": 0.681,
+   "dijkstra_ms": 0.385
+  },
+  {
+   "grid": "30x30 (with barrier)",
+   "nodes": 874,
+   "distance_m": 5842.0,
+   "astar_expanded": 785,
+   "dijkstra_expanded": 871,
+   "expansion_reduction_pct": 9.9,
+   "astar_ms": 2.059,
+   "dijkstra_ms": 1.244
+  }
+ ],
+ "synthetic_scalability": [
+  {
+   "routes": 20,
+   "graph_nodes": 500,
+   "graph_edges": 1160,
+   "expanded_timetable_trips": 2356,
+   "raptor_mean_ms": 0.66,
+   "dijkstra_mean_ms": 0.76,
+   "avg_pareto_options": 1
+  },
+  {
+   "routes": 50,
+   "graph_nodes": 1100,
+   "graph_edges": 2900,
+   "expanded_timetable_trips": 5816,
+   "raptor_mean_ms": 1.21,
+   "dijkstra_mean_ms": 2.51,
+   "avg_pareto_options": 1.8
+  },
+  {
+   "routes": 100,
+   "graph_nodes": 2100,
+   "graph_edges": 5800,
+   "expanded_timetable_trips": 11586,
+   "raptor_mean_ms": 2.98,
+   "dijkstra_mean_ms": 4.59,
+   "avg_pareto_options": 1.8
+  }
+ ]
+}

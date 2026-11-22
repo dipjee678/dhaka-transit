@@ -1,0 +1,18 @@
+seq,name_bn,operational,name_en_override,status,notes
+1,উত্তরা উত্তর,1,,verified,
+2,উত্তরা সেন্টার,1,,verified,OSM stop_area Bangla name is 'উত্তরা মধ্য' (differs from DMTCL) — candidate OSM fix
+3,উত্তরা দক্ষিণ,1,,verified,
+4,পল্লবী,1,,verified,
+5,মিরপুর-১১,1,,verified,
+6,মিরপুর-১০,1,,verified,
+7,কাজীপাড়া,1,,verified,
+8,শেওড়াপাড়া,1,,verified,
+9,আগারগাঁও,1,,verified,
+10,বিজয় সরণি,1,Bijoy Sarani,verified,English = transliteration of the official Bangla name; OSM has 'Bijoy Sarawni' (stop_area) / 'Bijoy Shoroni' (stops) — candidate OSM fix
+11,ফার্মগেট,1,,verified,
+12,কারওয়ান বাজার,1,,verified,
+13,শাহবাগ,1,,verified,
+14,ঢাকা বিশ্ববিদ্যালয়,1,,verified,
+15,বাংলাদেশ সচিবালয়,1,,verified,
+16,মতিঝিল,1,,verified,
+17,কমলাপুর,0,,verified,Listed on the DMTCL station page; not part of the OSM operational route relation (extension). Excluded from the feed until service starts.

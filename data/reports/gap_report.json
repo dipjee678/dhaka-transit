@@ -1,0 +1,234 @@
+{
+ "generated_at": "2026-11-22T23:55:17",
+ "osm_snapshot": "2026-11-16",
+ "metro": {
+  "operational_stations_mapped": 16,
+  "official_operational_stations": 16,
+  "official_planned_excluded": [
+   "কমলাপুর"
+  ],
+  "track_length_km": {
+   "mrt6_d0": 18.97,
+   "mrt6_d1": 18.97
+  },
+  "schedule_status": [
+   [
+    "estimated",
+    "unverified"
+   ]
+  ],
+  "verified_fare_pairs": 0,
+  "total_fare_pairs_needed": 240,
+  "candidate_osm_fixes": [
+   {
+    "seq": 2,
+    "name_bn": "উত্তরা সেন্টার",
+    "note": "OSM stop_area Bangla name is 'উত্তরা মধ্য' (differs from DMTCL) — candidate OSM fix"
+   },
+   {
+    "seq": 10,
+    "name_bn": "বিজয় সরণি",
+    "note": "English = transliteration of the official Bangla name; OSM has 'Bijoy Sarawni' (stop_area) / 'Bijoy Shoroni' (stops) — candidate OSM fix"
+   }
+  ]
+ },
+ "osm_bus_relations": [
+  {
+   "osm_id": "r18732475",
+   "ref": "08",
+   "name": "Gabtoli to Jatrabari",
+   "operator": "Gabtoli Express",
+   "from": "Jatrrabari Intersection",
+   "to": "Gabtoli Bus Stand",
+   "stop_members": 0,
+   "way_members": 1,
+   "usable": false,
+   "issues": [
+    "only 0 stop/platform member(s)",
+    "only 1 way member(s)"
+   ]
+  }
+ ],
+ "curated_bus_routes": 0,
+ "osm_bus_inventory": {
+  "total": 1023,
+  "by_kind": {
+   "platform": 434,
+   "bus_station": 120,
+   "bus_stop": 152,
+   "stop_position": 317
+  },
+  "unnamed": 48,
+  "with_bangla_name": 45,
+  "ptv2_platform_stop_pairs_within_30m": 1,
+  "potential_duplicate_pairs_within_30m": 62
+ },
+ "mrt6_interchanges": [
+  {
+   "seq": 1,
+   "station_id": "mrt6_uttara_north",
+   "name_en": "Uttara North",
+   "bus_stops_250m": 0,
+   "bus_stops_500m": 0,
+   "closest_named": []
+  },
+  {
+   "seq": 2,
+   "station_id": "mrt6_uttara_center",
+   "name_en": "Uttara Center",
+   "bus_stops_250m": 0,
+   "bus_stops_500m": 0,
+   "closest_named": []
+  },
+  {
+   "seq": 3,
+   "station_id": "mrt6_uttara_south",
+   "name_en": "Uttara South",
+   "bus_stops_250m": 0,
+   "bus_stops_500m": 0,
+   "closest_named": []
+  },
+  {
+   "seq": 4,
+   "station_id": "mrt6_pallabi",
+   "name_en": "Pallabi",
+   "bus_stops_250m": 1,
+   "bus_stops_500m": 1,
+   "closest_named": [
+    "Pallabi Bus Station (241 m)"
+   ]
+  },
+  {
+   "seq": 5,
+   "station_id": "mrt6_mirpur_11",
+   "name_en": "Mirpur 11",
+   "bus_stops_250m": 1,
+   "bus_stops_500m": 2,
+   "closest_named": [
+    "Hall Purobi (6 m)",
+    "Mirpur 11 Bus Station (391 m)"
+   ]
+  },
+  {
+   "seq": 6,
+   "station_id": "mrt6_mirpur_10",
+   "name_en": "Mirpur 10",
+   "bus_stops_250m": 6,
+   "bus_stops_500m": 8,
+   "closest_named": [
+    "Mirpur 10 Circle Bus stop (94 m)",
+    "Mirpur 10 Bus Station (107 m)",
+    "Mirpur 10 Circle, Bus stop (167 m)"
+   ]
+  },
+  {
+   "seq": 7,
+   "station_id": "mrt6_kazipara",
+   "name_en": "Kazipara",
+   "bus_stops_250m": 0,
+   "bus_stops_500m": 1,
+   "closest_named": [
+    "Kazipara Bus Stand (258 m)"
+   ]
+  },
+  {
+   "seq": 8,
+   "station_id": "mrt6_shewrapara",
+   "name_en": "Shewrapara",
+   "bus_stops_250m": 1,
+   "bus_stops_500m": 1,
+   "closest_named": [
+    "Shewrapara (53 m)"
+   ]
+  },
+  {
+   "seq": 9,
+   "station_id": "mrt6_agargaon",
+   "name_en": "Agargaon",
+   "bus_stops_250m": 0,
+   "bus_stops_500m": 0,
+   "closest_named": []
+  },
+  {
+   "seq": 10,
+   "station_id": "mrt6_bijoy_sarani",
+   "name_en": "Bijoy Sarani",
+   "bus_stops_250m": 1,
+   "bus_stops_500m": 1,
+   "closest_named": [
+    "Ziya Park Bus stop (232 m)"
+   ]
+  },
+  {
+   "seq": 11,
+   "station_id": "mrt6_farmgate",
+   "name_en": "Farmgate",
+   "bus_stops_250m": 2,
+   "bus_stops_500m": 9,
+   "closest_named": [
+    "Leguna Tempu Stand (130 m)",
+    "Tejgaon College Bus Stop (170 m)",
+    "Indira Road Bus Stop (253 m)"
+   ]
+  },
+  {
+   "seq": 12,
+   "station_id": "mrt6_karwan_bazar",
+   "name_en": "Karwan Bazar",
+   "bus_stops_250m": 2,
+   "bus_stops_500m": 2,
+   "closest_named": [
+    "Kawran Bazaar Bus stop (110 m)",
+    "Basnhundhara City South Bus Stop, Panthapath, Dhaka (155 m)"
+   ]
+  },
+  {
+   "seq": 13,
+   "station_id": "mrt6_shahbagh",
+   "name_en": "Shahbagh",
+   "bus_stops_250m": 1,
+   "bus_stops_500m": 4,
+   "closest_named": [
+    "Shahbag P.G. Hospital Bus stop, Shahbagh Rd, Dhaka (141 m)",
+    "Poribagh Bus stop (400 m)",
+    "Kataban Bus Stop (409 m)"
+   ]
+  },
+  {
+   "seq": 14,
+   "station_id": "mrt6_dhaka_university",
+   "name_en": "Dhaka University",
+   "bus_stops_250m": 3,
+   "bus_stops_500m": 6,
+   "closest_named": [
+    "Varsity Bus Stops, Nilkhet Rd, Dhaka (186 m)",
+    "Rokeya Hall (220 m)",
+    "IML (300 m)"
+   ]
+  },
+  {
+   "seq": 15,
+   "station_id": "mrt6_bangladesh_secretariat",
+   "name_en": "Bangladesh Secretariat",
+   "bus_stops_250m": 3,
+   "bus_stops_500m": 5,
+   "closest_named": [
+    "Press Club Bus stop (20 m)",
+    "Pressclub Bus stop (65 m)",
+    "Paltan Bus stop (239 m)"
+   ]
+  },
+  {
+   "seq": 16,
+   "station_id": "mrt6_motijheel",
+   "name_en": "Motijheel",
+   "bus_stops_250m": 2,
+   "bus_stops_500m": 15,
+   "closest_named": [
+    "BRTC Bus Counter Bus stop (22 m)",
+    "City Centre(Janata Bank) (150 m)",
+    "Motijheel Junction Bus Station (292 m)"
+   ]
+  }
+ ]
+}

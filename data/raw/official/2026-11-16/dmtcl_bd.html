@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMTCL | Digital Gateway</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .metro-gradient {
+            background: linear-gradient(135deg, #006a4e 0%, #004d39 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            border-color: #006a4e;
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="metro-gradient text-white p-4 shadow-xl border-b-4 border-yellow-400">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="bg-white p-2 rounded-lg shadow-inner">
+                    <i class="fas fa-subway text-green-700 text-3xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-black tracking-tight">DMTCL HUB</h1>
+                    <p class="text-xs uppercase tracking-widest opacity-90 font-semibold">Dhaka Mass Transit Company Limited</p>
+                </div>
+            </div>
+            
+            <div class="mt-4 md:mt-0 text-right font-mono bg-black bg-opacity-30 p-3 rounded-lg border border-white border-opacity-10 backdrop-blur-sm">
+                                <div class="text-sm font-bold">Monday, 16 November 2026</div>
+                <div class="text-xs text-green-300">১ অগ্রহায়ণ ১৪৩৩ বঙ্গাব্দ</div>
+                <div id="clock" class="text-xl font-black mt-1 text-yellow-400">00:00:00</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-10">
+        <section class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4">Central Service Portal</h2>
+        </section>
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            
+                <a href="https://dmtcl.gov.bd" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-globe text-blue-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">DMTCL Main Website</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="https://dmtcl-d.nothi.gov.bd/" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-file-signature text-purple-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">Digital Nothi (D-Nothi)</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="https://mail.dmtcl.gov.bd/" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-envelope-open-text text-red-500 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">DMTCL Webmail</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="http://10.5.0.202/dashboard/" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-box-archive text-amber-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">Aconex Archive System</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="http://10.5.0.100:8081/" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-id-badge text-emerald-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">Attendance Management</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="/meal" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-utensils text-orange-500 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">Dining Management System</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="/asset" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-microchip text-slate-700 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">IT Asset Management</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="/schedule" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-calendar-check text-indigo-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">MD's Schedule Management</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="/itsupport" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas 	fa fa-wrench text-red-500 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">IT Support</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+                <a href="/le" target="_blank" class="card-hover bg-white p-6 rounded-2xl border border-gray-100 flex items-center space-x-4 shadow-sm group">
+                    <div class="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center transition-colors group-hover:bg-green-50">
+                        <i class="fas fa-microchip text-slate-700 text-2xl"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-gray-800 leading-tight">Lift & Escalator Asset Management</h3>
+                        <p class="text-xs font-semibold text-gray-400 mt-1 uppercase tracking-wider group-hover:text-green-600 transition-colors">Access System <i class="fas fa-arrow-right ml-1"></i></p>
+                    </div>
+                </a>
+            <div class="border-2 border-dashed border-gray-200 p-6 rounded-2xl flex items-center justify-center bg-gray-50 bg-opacity-50">
+                <span class="text-gray-400 text-sm font-medium italic underline decoration-dotted">More services are coming...</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-2">
+                <div class="h-px w-8 bg-gray-300"></div>
+                <p class="text-sm font-bold text-gray-700 uppercase tracking-tighter">Powered by <span class="text-green-700">DMTCL ICT</span></p>
+                <div class="h-px w-8 bg-gray-300"></div>
+            </div>
+            <p class="text-[10px] text-gray-400 font-mono">NODE_ADMIN_PORTAL // VER 2.0.4</p>
+        </div>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

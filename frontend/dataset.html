@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open GTFS Dataset &amp; Contributions — Dhaka Transit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">DT</span>
+        <span>Dhaka Transit<span class="brand-sub">Open GTFS &amp; Multimodal Planner</span></span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav aria-label="Main navigation">
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="map.html" data-page="map">Map</a></li>
+          <li><a href="results.html" data-page="results">Route Planner</a></li>
+          <li><a href="dataset.html" data-page="dataset">Open Dataset</a></li>
+          <li><a href="about.html" data-page="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack-lg">
+    <section class="card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div>
+        <h1 class="hero-title" style="margin-bottom:4px;">Dhaka Open GTFS Dataset</h1>
+        <p class="muted" style="margin:0;">
+          Reusable, spec-compliant public transit feed for Dhaka under <strong>ODbL 1.0</strong>.
+          Every record carries source provenance and verification status.
+        </p>
+        <p id="ds-attribution" class="muted" style="font-size:0.8rem;margin:6px 0 0;"></p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a id="download-zip-btn" class="btn btn-primary" href="/api/dataset/download" download>⬇ Download dhaka_gtfs.zip</a>
+        <a class="btn btn-secondary" href="/api/dataset/validation" target="_blank" rel="noopener">Validation JSON</a>
+        <a class="btn btn-secondary" href="/api/dataset/gaps" target="_blank" rel="noopener">Gap Report JSON</a>
+      </div>
+    </section>
+
+    <section class="stats-strip" style="padding:0;margin:0;">
+      <div class="stat-card">
+        <div id="ds-version" class="stat-value">—</div>
+        <div class="stat-label">GTFS Feed Version</div>
+      </div>
+      <div class="stat-card">
+        <div id="ds-stations" class="stat-value">—</div>
+        <div class="stat-label">Operational MRT-6 Stations</div>
+      </div>
+      <div class="stat-card">
+        <div id="ds-osm-stops" class="stat-value">—</div>
+        <div class="stat-label">Mapped OSM Bus Stops</div>
+      </div>
+      <div class="stat-card">
+        <div id="ds-errors" class="stat-value">—</div>
+        <div class="stat-label">GTFS Validator Errors</div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="card">
+        <h2 class="section-title">GTFS Files</h2>
+        <div id="validation-summary" style="margin-bottom:12px;"></div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>File</th><th>Rows</th><th>Size</th><th>Download</th></tr></thead>
+            <tbody id="gtfs-files-body"><tr><td colspan="4" class="muted">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Priority Field-Survey Interchanges</h2>
+        <p class="muted" style="margin-top:0;">
+          OSM currently contains <strong>0 usable bus route relations</strong> in Dhaka. These MRT-6 stations have the
+          highest density of nearby OSM bus stops and are top priorities for GPS bus-route surveys:
+        </p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>MRT-6 Station</th><th>≤ 250 m</th><th>≤ 500 m</th><th>Nearby OSM Stops</th></tr></thead>
+            <tbody id="gaps-interchange-body"><tr><td colspan="4" class="muted">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Source Attribution &amp; Licences</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Source ID</th><th>Source</th><th>Category</th><th>Licence</th><th>Notes</th></tr></thead>
+          <tbody id="sources-body"><tr><td colspan="5" class="muted">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="card">
+        <h2 class="section-title">Submit Missing Bus Stop or Route</h2>
+        <p class="muted" style="margin-top:0;">
+          Help map Dhaka's bus network! Submit only first-hand observations or GPS coordinates (never copy from commercial maps).
+          Accepted contributions are tagged <span class="badge badge-community">Community</span>.
+        </p>
+        <form id="contrib-form">
+          <div class="input-row">
+            <div class="form-group">
+              <label class="form-label" for="c-name"><span>Your Name *</span></label>
+              <input id="c-name" name="contributor_name" class="input" type="text" required minlength="2" placeholder="e.g. Rafiq Ahmed" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-contact"><span>Email / GitHub (optional)</span></label>
+              <input id="c-contact" name="contact" class="input" type="text" placeholder="@handle or email" />
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="form-group">
+              <label class="form-label" for="c-kind"><span>Contribution Type *</span></label>
+              <select id="c-kind" name="kind" class="input">
+                <option value="new_stop">New bus stop</option>
+                <option value="stop_fix">Fix stop location/name</option>
+                <option value="new_route">New bus route</option>
+                <option value="travel_time">Observed travel time</option>
+                <option value="headway">Observed bus headway</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-item"><span>Stop or Route Name *</span></label>
+              <input id="c-item" name="item_name" class="input" type="text" required placeholder="e.g. Mirpur 10 Bus Counter" />
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="form-group">
+              <label class="form-label" for="c-lat"><span>Latitude (Dhaka: 23.60–24.05)</span></label>
+              <input id="c-lat" name="lat" class="input" type="number" step="0.000001" placeholder="23.806900" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-lon"><span>Longitude (Dhaka: 90.20–90.60)</span></label>
+              <input id="c-lon" name="lon" class="input" type="number" step="0.000001" placeholder="90.368700" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-route"><span>Bus Operator / Corridor (optional)</span></label>
+            <input id="c-route" name="route_info" class="input" type="text" placeholder="e.g. Bikolpo Auto Service — Mirpur 12 to Motijheel" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-notes"><span>Observation Notes / GPX Reference</span></label>
+            <textarea id="c-notes" name="notes" class="input" rows="2" placeholder="Date observed, landmark, headway minutes…"></textarea>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <button type="submit" class="btn btn-primary">Submit Contribution</button>
+            <span id="contrib-msg" hidden role="status"></span>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Recent Community Submissions</h2>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>ID</th><th>Contributor</th><th>Kind</th><th>Details</th><th>Status</th></tr></thead>
+            <tbody id="contrib-list"><tr><td colspan="5" class="muted">Loading…</td></tr></tbody>
+          </table>
+        </div>
+        <h3 style="font-size:0.95rem;margin-top:18px;">Bulk Field Surveys (CSV + GPX)</h3>
+        <p class="muted" style="font-size:0.84rem;">
+          For full bus corridors, copy <code>contributions/templates/route_template.csv</code> in the repository and run:
+        </p>
+        <pre class="code-block">cd backend
+python -m pipeline.import_contribution ..\my_survey.csv --dry-run
+python -m pipeline.build_gtfs &amp;&amp; python -m pipeline.validate_feed</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Dhaka Transit Open Dataset · ODbL 1.0 · Contains OpenStreetMap data &copy; OpenStreetMap contributors
+  </footer>
+
+  <script type="module" src="js/dataset.js"></script>
+</body>
+</html>

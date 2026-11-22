@@ -1,0 +1,80 @@
+entity_table,entity_id,field,source_id,category,status,verified_at,notes
+routes,mrt6,,dmtcl_station_page,official,verified,2026-11-16,"Line, operator and station order from DMTCL; colour #006E34 from OSM r15060935"
+stops,mrt6_uttara_north,,osm_2026-11-16,osm,unverified,,OSM r15058414; point: osm station node n10292253840
+stops,mrt6_uttara_north,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_uttara_north_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10293351385
+stops,mrt6_uttara_north_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10293351386
+stops,mrt6_uttara_center,,osm_2026-11-16,osm,unverified,,OSM r15058413; point: osm station node n10292253837
+stops,mrt6_uttara_center,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_uttara_center_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10292253838
+stops,mrt6_uttara_center_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10292253839
+stops,mrt6_uttara_south,,osm_2026-11-16,osm,unverified,,OSM r15062276; point: osm station node n10292253843
+stops,mrt6_uttara_south,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_uttara_south_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10292253844
+stops,mrt6_uttara_south_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10292253845
+stops,mrt6_pallabi,,osm_2026-11-16,osm,unverified,,OSM r15062275; point: osm station node n6292785241
+stops,mrt6_pallabi,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_pallabi_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007266
+stops,mrt6_pallabi_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007267
+stops,mrt6_mirpur_11,,osm_2026-11-16,osm,unverified,,OSM r15062274; point: osm station node n10294007262
+stops,mrt6_mirpur_11,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_mirpur_11_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007263
+stops,mrt6_mirpur_11_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007264
+stops,mrt6_mirpur_10,,osm_2026-11-16,osm,unverified,,OSM r15062273; point: osm station node n6292785240
+stops,mrt6_mirpur_10,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_mirpur_10_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007260
+stops,mrt6_mirpur_10_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007261
+stops,mrt6_kazipara,,osm_2026-11-16,osm,unverified,,OSM r15062272; point: osm station node n10294007258
+stops,mrt6_kazipara,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_kazipara_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007256
+stops,mrt6_kazipara_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007257
+stops,mrt6_shewrapara,,osm_2026-11-16,osm,unverified,,OSM r15062271; point: osm station node n6292785237
+stops,mrt6_shewrapara,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_shewrapara_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007253
+stops,mrt6_shewrapara_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007254
+stops,mrt6_agargaon,,osm_2026-11-16,osm,unverified,,OSM r15062270; point: osm station node n6292785236
+stops,mrt6_agargaon,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_agargaon_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007250
+stops,mrt6_agargaon_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294007251
+stops,mrt6_bijoy_sarani,,osm_2026-11-16,osm,unverified,,OSM r16007466; point: osm station node n10294553601
+stops,mrt6_bijoy_sarani,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_bijoy_sarani_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576110
+stops,mrt6_bijoy_sarani_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576111
+stops,mrt6_farmgate,,osm_2026-11-16,osm,unverified,,OSM r16007467; point: osm station node n10294553594
+stops,mrt6_farmgate,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_farmgate_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294553596
+stops,mrt6_farmgate_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294553595
+stops,mrt6_karwan_bazar,,osm_2026-11-16,osm,unverified,,OSM r16007468; point: osm station node n10294576119
+stops,mrt6_karwan_bazar,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_karwan_bazar_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576118
+stops,mrt6_karwan_bazar_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576117
+stops,mrt6_shahbagh,,osm_2026-11-16,osm,unverified,,OSM r16007469; point: osm station node n10294553581
+stops,mrt6_shahbagh,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_shahbagh_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576121
+stops,mrt6_shahbagh_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576120
+stops,mrt6_dhaka_university,,osm_2026-11-16,osm,unverified,,OSM r16007470; point: osm station node n10294553569
+stops,mrt6_dhaka_university,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_dhaka_university_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294553576
+stops,mrt6_dhaka_university_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n11186095784
+stops,mrt6_bangladesh_secretariat,,osm_2026-11-16,osm,unverified,,OSM r16007471; point: osm station node n10294553574
+stops,mrt6_bangladesh_secretariat,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_bangladesh_secretariat_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576123
+stops,mrt6_bangladesh_secretariat_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10294576122
+stops,mrt6_motijheel,,osm_2026-11-16,osm,unverified,,OSM r15060934; point: osm station node n10997298523
+stops,mrt6_motijheel,stop_name_bn,dmtcl_station_page,official,verified,2026-11-16,
+stops,mrt6_motijheel_d0,,osm_2026-11-16,osm,unverified,,OSM stop_position n10293351384
+stops,mrt6_motijheel_d1,,osm_2026-11-16,osm,unverified,,OSM stop_position n10293351383
+shapes,mrt6_d0,,osm_2026-11-16,osm,unverified,,chained from OSM route relation r15060935
+shapes,mrt6_d1,,osm_2026-11-16,osm,unverified,,chained from OSM route relation r15060936
+trips,mrt6_sat_thu_d0,,secondary_mrt_schedule,estimated,unverified,,First/last departure from Uttara North and ~38 min run time as reported by secondary sites. Headway 10 min = upper end of the reported 5-10 min weekday range (conservative). Replace with the official DMTCL timetable when obtained. Per-station times distributed by track distance (estimate).
+stop_times,mrt6_sat_thu_d0,,secondary_mrt_schedule,estimated,unverified,,First/last departure from Uttara North and ~38 min run time as reported by secondary sites. Headway 10 min = upper end of the reported 5-10 min weekday range (conservative). Replace with the official DMTCL timetable when obtained. Per-station times distributed by track distance (estimate).
+frequencies,mrt6_sat_thu_d0|06:30:00,,secondary_mrt_schedule,estimated,unverified,,First/last departure from Uttara North and ~38 min run time as reported by secondary sites. Headway 10 min = upper end of the reported 5-10 min weekday range (conservative). Replace with the official DMTCL timetable when obtained. Per-station times distributed by track distance (estimate).
+trips,mrt6_sat_thu_d1,,secondary_mrt_schedule,estimated,unverified,,First/last departure from Motijheel as reported by secondary sites. Headway 10 min (conservative estimate). Per-station times distributed by track distance (estimate).
+stop_times,mrt6_sat_thu_d1,,secondary_mrt_schedule,estimated,unverified,,First/last departure from Motijheel as reported by secondary sites. Headway 10 min (conservative estimate). Per-station times distributed by track distance (estimate).
+frequencies,mrt6_sat_thu_d1|07:15:00,,secondary_mrt_schedule,estimated,unverified,,First/last departure from Motijheel as reported by secondary sites. Headway 10 min (conservative estimate). Per-station times distributed by track distance (estimate).
+trips,mrt6_fri_d0,,secondary_mrt_schedule,estimated,unverified,,Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported). Per-station times distributed by track distance (estimate).
+stop_times,mrt6_fri_d0,,secondary_mrt_schedule,estimated,unverified,,Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported). Per-station times distributed by track distance (estimate).
+frequencies,mrt6_fri_d0|15:00:00,,secondary_mrt_schedule,estimated,unverified,,Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported). Per-station times distributed by track distance (estimate).
+trips,mrt6_fri_d1,,secondary_mrt_schedule,estimated,unverified,,Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported). Per-station times distributed by track distance (estimate).
+stop_times,mrt6_fri_d1,,secondary_mrt_schedule,estimated,unverified,,Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported). Per-station times distributed by track distance (estimate).
+frequencies,mrt6_fri_d1|15:20:00,,secondary_mrt_schedule,estimated,unverified,,Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported). Per-station times distributed by track distance (estimate).

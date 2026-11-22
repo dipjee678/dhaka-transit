@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &amp; Algorithms — Dhaka Transit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">DT</span>
+        <span>Dhaka Transit<span class="brand-sub">Open GTFS &amp; Multimodal Planner</span></span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav aria-label="Main navigation">
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="map.html" data-page="map">Map</a></li>
+          <li><a href="results.html" data-page="results">Route Planner</a></li>
+          <li><a href="dataset.html" data-page="dataset">Open Dataset</a></li>
+          <li><a href="about.html" data-page="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container stack-lg">
+    <section class="card">
+      <h1 class="hero-title">About Dhaka Transit</h1>
+      <p class="muted" style="max-width:78ch;">
+        <strong>Dhaka Transit</strong> is an open-source public transportation dataset and multimodal route-planning
+        platform for Dhaka, Bangladesh. Because usable open GTFS feeds for Dhaka are virtually non-existent (our OSM
+        snapshot found <strong>0 usable bus route relations</strong> across all of Greater Dhaka), this project pairs
+        a transparent, community-extensible GTFS data pipeline with clean implementations of real-world transit
+        routing algorithms.
+      </p>
+    </section>
+
+    <section class="two-col">
+      <div class="card">
+        <h2 class="section-title">Dijkstra (Frequency-Based Graph)</h2>
+        <p class="muted">
+          Models each boarding stop <code>S(p)</code> and each route-direction stop <code>R(r, d, p)</code> as graph
+          nodes. Staying on board costs only in-vehicle time; boarding incurs expected wait (<code>headway / 2</code>)
+          plus a transfer penalty on subsequent boardings using an exact 1-bit <code>(node, has_boarded)</code> state.
+        </p>
+        <ul class="muted" style="padding-left:18px;">
+          <li>Time-independent: answers <em>"what is the typical best route?"</em></li>
+          <li>Powers untimed queries and graceful fallback outside operating hours.</li>
+          <li>Complexity: <code>O((|V| + |E|) log |V|)</code> with binary heap.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">RAPTOR (Round-Based Transit Routing)</h2>
+        <p class="muted">
+          Operates directly on the timetable without a priority queue. Round <code>k</code> scans every route pattern
+          serving stops improved in round <code>k - 1</code>, propagates transitively closed walking footpaths, and
+          applies local &amp; target pruning.
+        </p>
+        <ul class="muted" style="padding-left:18px;">
+          <li>Calendar-exact: distinguishes Sat–Thu schedules from Friday afternoon MRT-6 service.</li>
+          <li>Returns a <strong>Pareto-optimal set</strong> trading off travel time against transfers.</li>
+          <li>Verified against an independent time-expanded Dijkstra oracle in automated tests.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">A* Walking Optimization &amp; Provenance Integrity</h2>
+      <div class="two-col">
+        <div>
+          <h3 style="font-size:0.98rem;margin:0 0 6px;">Admissible A* Pedestrian Search</h3>
+          <p class="muted" style="margin:0;">
+            <code>transit/routing/astar.py</code> implements A* on OpenStreetMap walkable street graphs using the
+            great-circle haversine lower bound <code>h(u, goal) = haversine_m(u, goal)</code>. Because straight-line
+            distance never overestimates street distance, A* finds optimal walking paths while expanding strictly fewer
+            nodes than Dijkstra.
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size:0.98rem;margin:0 0 6px;">Four-Tier Data Provenance</h3>
+          <p class="muted" style="margin:0 0 8px;">Every record and journey carries a weakest-link provenance badge:</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="badge badge-official">Official (DMTCL / DTCA)</span>
+            <span class="badge badge-osm">OpenStreetMap (ODbL)</span>
+            <span class="badge badge-community">Community Survey</span>
+            <span class="badge badge-estimated">Estimated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Technology Stack</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Layer</th><th>Technologies</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Frontend</strong></td><td>HTML5, CSS3, ES-Module JavaScript, Leaflet.js, OpenStreetMap</td><td>Zero-build responsive UI &amp; Canvas-accelerated interactive maps.</td></tr>
+            <tr><td><strong>Backend API</strong></td><td>Python 3.14, FastAPI, Pydantic v2, Uvicorn</td><td>Typed REST API with automatic OpenAPI/Swagger documentation (<code>/docs</code>).</td></tr>
+            <tr><td><strong>Routing Core</strong></td><td>Pure Python (<code>backend/transit/</code>)</td><td>Framework-independent GTFS, footpaths, Dijkstra, RAPTOR, and A*.</td></tr>
+            <tr><td><strong>Database</strong></td><td>SQLite (development) &amp; PostgreSQL + PostGIS (deployment)</td><td>Lossless GTFS + provenance + community contribution storage.</td></tr>
+            <tr><td><strong>Open Data</strong></td><td>GTFS Schedule + <code>frequencies.txt</code> + <code>translations.txt</code> + Overpass API</td><td>Standardized transit feed with Bangla translations and automated validation.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Dhaka Transit — Code licensed under MIT · Dataset licensed under ODbL 1.0 ·
+    <a href="/docs" target="_blank" rel="noopener">API Documentation</a>
+  </footer>
+
+  <script type="module">
+    import { initNavbar } from "./js/api.js";
+    initNavbar("about");
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+table_name,field_name,language,translation,record_id
+routes,route_long_name,bn,এমআরটি লাইন ৬,mrt6
+stops,stop_name,bn,উত্তরা উত্তর,mrt6_uttara_north
+stops,stop_name,bn,উত্তরা উত্তর,mrt6_uttara_north_d0
+stops,stop_name,bn,উত্তরা উত্তর,mrt6_uttara_north_d1
+stops,stop_name,bn,উত্তরা সেন্টার,mrt6_uttara_center
+stops,stop_name,bn,উত্তরা সেন্টার,mrt6_uttara_center_d0
+stops,stop_name,bn,উত্তরা সেন্টার,mrt6_uttara_center_d1
+stops,stop_name,bn,উত্তরা দক্ষিণ,mrt6_uttara_south
+stops,stop_name,bn,উত্তরা দক্ষিণ,mrt6_uttara_south_d0
+stops,stop_name,bn,উত্তরা দক্ষিণ,mrt6_uttara_south_d1
+stops,stop_name,bn,পল্লবী,mrt6_pallabi
+stops,stop_name,bn,পল্লবী,mrt6_pallabi_d0
+stops,stop_name,bn,পল্লবী,mrt6_pallabi_d1
+stops,stop_name,bn,মিরপুর-১১,mrt6_mirpur_11
+stops,stop_name,bn,মিরপুর-১১,mrt6_mirpur_11_d0
+stops,stop_name,bn,মিরপুর-১১,mrt6_mirpur_11_d1
+stops,stop_name,bn,মিরপুর-১০,mrt6_mirpur_10
+stops,stop_name,bn,মিরপুর-১০,mrt6_mirpur_10_d0
+stops,stop_name,bn,মিরপুর-১০,mrt6_mirpur_10_d1
+stops,stop_name,bn,কাজীপাড়া,mrt6_kazipara
+stops,stop_name,bn,কাজীপাড়া,mrt6_kazipara_d0
+stops,stop_name,bn,কাজীপাড়া,mrt6_kazipara_d1
+stops,stop_name,bn,শেওড়াপাড়া,mrt6_shewrapara
+stops,stop_name,bn,শেওড়াপাড়া,mrt6_shewrapara_d0
+stops,stop_name,bn,শেওড়াপাড়া,mrt6_shewrapara_d1
+stops,stop_name,bn,আগারগাঁও,mrt6_agargaon
+stops,stop_name,bn,আগারগাঁও,mrt6_agargaon_d0
+stops,stop_name,bn,আগারগাঁও,mrt6_agargaon_d1
+stops,stop_name,bn,বিজয় সরণি,mrt6_bijoy_sarani
+stops,stop_name,bn,বিজয় সরণি,mrt6_bijoy_sarani_d0
+stops,stop_name,bn,বিজয় সরণি,mrt6_bijoy_sarani_d1
+stops,stop_name,bn,ফার্মগেট,mrt6_farmgate
+stops,stop_name,bn,ফার্মগেট,mrt6_farmgate_d0
+stops,stop_name,bn,ফার্মগেট,mrt6_farmgate_d1
+stops,stop_name,bn,কারওয়ান বাজার,mrt6_karwan_bazar
+stops,stop_name,bn,কারওয়ান বাজার,mrt6_karwan_bazar_d0
+stops,stop_name,bn,কারওয়ান বাজার,mrt6_karwan_bazar_d1
+stops,stop_name,bn,শাহবাগ,mrt6_shahbagh
+stops,stop_name,bn,শাহবাগ,mrt6_shahbagh_d0
+stops,stop_name,bn,শাহবাগ,mrt6_shahbagh_d1
+stops,stop_name,bn,ঢাকা বিশ্ববিদ্যালয়,mrt6_dhaka_university
+stops,stop_name,bn,ঢাকা বিশ্ববিদ্যালয়,mrt6_dhaka_university_d0
+stops,stop_name,bn,ঢাকা বিশ্ববিদ্যালয়,mrt6_dhaka_university_d1
+stops,stop_name,bn,বাংলাদেশ সচিবালয়,mrt6_bangladesh_secretariat
+stops,stop_name,bn,বাংলাদেশ সচিবালয়,mrt6_bangladesh_secretariat_d0
+stops,stop_name,bn,বাংলাদেশ সচিবালয়,mrt6_bangladesh_secretariat_d1
+stops,stop_name,bn,মতিঝিল,mrt6_motijheel
+stops,stop_name,bn,মতিঝিল,mrt6_motijheel_d0
+stops,stop_name,bn,মতিঝিল,mrt6_motijheel_d1

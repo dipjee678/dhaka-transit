@@ -1,0 +1,5 @@
+route_id,service_id,trip_id,trip_headsign,direction_id,shape_id
+mrt6,mrt6_sat_thu,mrt6_sat_thu_d0,Motijheel,0,mrt6_d0
+mrt6,mrt6_sat_thu,mrt6_sat_thu_d1,Uttara North,1,mrt6_d1
+mrt6,mrt6_fri,mrt6_fri_d0,Motijheel,0,mrt6_d0
+mrt6,mrt6_fri,mrt6_fri_d1,Uttara North,1,mrt6_d1

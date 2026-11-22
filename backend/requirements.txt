@@ -1,0 +1,11 @@
+# Core (Phase 1-2 need only the standard library + pytest)
+pytest>=8.0
+httpx>=0.27
+
+# Backend API (Phase 3+)
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+
+# Optional: PostGIS deployment (install when moving off SQLite)
+# psycopg[binary]>=3.2

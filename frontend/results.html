@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Route Results — Dhaka Transit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">DT</span>
+        <span>Dhaka Transit<span class="brand-sub">Open GTFS &amp; Multimodal Planner</span></span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav aria-label="Main navigation">
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="map.html" data-page="map">Map</a></li>
+          <li><a href="results.html" data-page="results">Route Planner</a></li>
+          <li><a href="dataset.html" data-page="dataset">Open Dataset</a></li>
+          <li><a href="about.html" data-page="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="results-shell">
+    <section class="stack-md" aria-label="Journey options and breakdown">
+      <div class="card">
+        <form id="replan-form" class="stack-sm">
+          <div class="input-row">
+            <div>
+              <label class="form-label" for="res-from"><span>From Station</span></label>
+              <select id="res-from" class="input"></select>
+            </div>
+            <div>
+              <label class="form-label" for="res-to"><span>To Station</span></label>
+              <select id="res-to" class="input"></select>
+            </div>
+          </div>
+          <div class="input-row" style="grid-template-columns:1fr 1fr 1fr;">
+            <div>
+              <label class="form-label" for="res-date"><span>Date</span></label>
+              <input id="res-date" class="input" type="date" />
+            </div>
+            <div>
+              <label class="form-label" for="res-time"><span>Time</span></label>
+              <input id="res-time" class="input" type="time" />
+            </div>
+            <div>
+              <label class="form-label" for="res-algorithm"><span>Algorithm</span></label>
+              <select id="res-algorithm" class="input">
+                <option value="combined">Combined</option>
+                <option value="raptor">RAPTOR</option>
+                <option value="dijkstra">Dijkstra</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;justify-content:space-between;align-items:center;">
+            <a href="index.html" class="muted" style="font-size:0.82rem;">← Pick custom coordinates on Home</a>
+            <button type="submit" class="btn btn-primary btn-sm">Update Route</button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <h1 id="results-heading" class="section-title" style="margin-bottom:2px;">Planning route…</h1>
+        <p id="results-sub" class="muted" style="margin:0;"></p>
+      </div>
+
+      <div id="warnings-box" class="notice-banner" hidden role="status"></div>
+      <div id="journeys-list" aria-live="polite"></div>
+      <div id="compare-box"></div>
+    </section>
+
+    <aside class="map-frame results-map-sticky" aria-label="Route visualization map">
+      <div id="results-map" class="map-canvas"></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    All travel times are calculated from GTFS feed data or explicitly labelled as estimates · Map &copy; OpenStreetMap contributors
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script type="module" src="js/results.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+{
+ "version": 0.6,
+ "generator": "Overpass API 0.7.62.11 87bfad18",
+ "osm3s": {
+  "timestamp_osm_base": "2026-11-16T14:51:12Z",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+ },
+ "elements": [
+  {
+   "type": "node",
+   "id": 6139734067,
+   "lat": 23.7269633,
+   "lon": 90.4207872
+  },
+  {
+   "type": "node",
+   "id": 6139734071,
+   "lat": 23.730078,
+   "lon": 90.4154799
+  },
+  {
+   "type": "node",
+   "id": 6139734072,
+   "lat": 23.7301231,
+   "lon": 90.415383
+  },
+  {
+   "type": "node",
+   "id": 6139734073,
+   "lat": 23.7301925,
+   "lon": 90.4152274
+  },
+  {
+   "type": "node",
+   "id": 6139734091,
+   "lat": 23.7265974,
+   "lon": 90.4213741
+  },
+  {
+   "type": "node",
+   "id": 6139734092,
+   "lat": 23.7266704,
+   "lon": 90.4213147
+  },
+  {
+   "type": "node",
+   "id": 6139734093,
+   "lat": 23.7267282,
+   "lon": 90.421212
+  },
+  {
+   "type": "node",
+   "id": 6139734094,
+   "lat": 23.7268421,
+   "lon": 90.4210061
+  },
+  {
+   "type": "node",
+   "id": 6139734194,
+   "lat": 23.7274905,
+   "lon": 90.4198516
+  },
+  {
+   "type": "node",
+   "id": 6139734195,
+   "lat": 23.7279931,
+   "lon": 90.4189781
+  },
+  {
+   "type": "node",
+   "id": 6139734196,
+   "lat": 23.7285093,
+   "lon": 90.4180668
+  },
+  {
+   "type": "node",
+   "id": 6139734197,
+   "lat": 23.7289333,
+   "lon": 90.4173505
+  },
+  {
+   "type": "node",
+   "id": 6139734199,
+   "lat": 23.730172,
+   "lon": 90.4152784
+  },
+  {
+   "type": "node",
+   "id": 6139734200,
+   "lat": 23.7299664,
+   "lon": 90.4156588
+  },
+  {
+   "type": "node",
+   "id": 6139734201,
+   "lat": 23.729609,
+   "lon": 90.416221
+  },
+  {
+   "type": "node",
+   "id": 6139734202,
+   "lat": 23.7293406,
+   "lon": 90.4166771
+  },
+  {
+   "type": "node",
+   "id": 9907465530,
+   "lat": 23.728868,
+   "lon": 90.4174596
+  },
+  {
+   "type": "node",
+   "id": 12033093284,
+   "lat": 23.7278873,
+   "lon": 90.4191619,
+   "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "BRTC Bus Counter Bus stop",
+    "public_transport": "platform"
+   }
+  },
+  {
+   "type": "node",
+   "id": 12604565118,
+   "lat": 23.7286927,
+   "lon": 90.4177563,
+   "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "City Centre(Janata Bank)",
+    "operator": "Gabtoli Express",
+    "public_transport": "platform"
+   }
+  },
+  {
+   "type": "node",
+   "id": 12604615307,
+   "lat": 23.7287402,
+   "lon": 90.4176758
+  },
+  {
+   "type": "way",
+   "id": 655281697,
+   "nodes": [
+    6139734091,
+    6139734092,
+    6139734093,
+    6139734094,
+    6139734067,
+    6139734194,
+    12033093284,
+    6139734195,
+    6139734196,
+    12604565118,
+    12604615307,
+    9907465530,
+    6139734197,
+    6139734202,
+    6139734201,
+    6139734200,
+    6139734071,
+    6139734072,
+    6139734199,
+    6139734073
+   ],
+   "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "name": "মতিঝিল সড়ক",
+    "name:bn": "মতিঝিল সড়ক",
+    "name:en": "Motijheel Road",
+    "oneway": "yes",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "relation",
+   "id": 18732475,
+   "members": [
+    {
+     "type": "way",
+     "ref": 655281697,
+     "role": ""
+    }
+   ],
+   "tags": {
+    "from": "Jatrrabari Intersection",
+    "name": "Gabtoli to Jatrabari",
+    "operator": "Gabtoli Express",
+    "ref": "08",
+    "route": "bus",
+    "to": "Gabtoli Bus Stand",
+    "type": "route"
+   }
+  }
+ ]
+}

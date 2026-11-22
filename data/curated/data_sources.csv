@@ -1,0 +1,5 @@
+source_id,name,url,license,category,retrieved_at,notes
+osm_2026-11-16,OpenStreetMap via Overpass API,https://www.openstreetmap.org/copyright,ODbL-1.0,osm,2026-11-16T14:48:05Z,Raw snapshots in data/raw/osm/2026-11-16 (metro.json; bus_stops.json; bus_routes.json)
+dmtcl_station_page,DMTCL MRT Line-6 station list (official website),https://dmtcl.gov.bd/pages/static-pages/6922e038933eb65569e260f0,Government of Bangladesh public information,official,2026-11-16,Station order and Bangla names. Raw HTML in data/raw/official/2026-11-16
+secondary_mrt_schedule,Secondary web reports of the DMTCL MRT-6 timetable (metrodhaka.com; dhakametro.info),https://metrodhaka.com,Facts only (no text copied),estimated,2026-11-16,First/last trains and ~38 min end-to-end run time as reported by third-party sites. NOT verified against an official DMTCL timetable.
+dhaka_transit_estimate,Dhaka Transit project estimate (documented assumptions),,ODbL-1.0,estimated,2026-11-16,Values computed by the pipeline from documented assumptions (see notes on each record)

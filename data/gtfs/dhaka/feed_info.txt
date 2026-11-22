@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+Dhaka Transit (open data project),https://github.com/dhaka-transit/dhaka-transit,en,20261116,20271115,0.2.0-phase2

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Local databases (rebuild from GTFS with database/load_gtfs.py)
+*.sqlite
+*.sqlite3
+*.db
+
+# Large raw source downloads (keep small dated snapshots; document the rest)
+data/raw/**/*.osm.pbf
+data/raw/**/*.zip
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment
+.env

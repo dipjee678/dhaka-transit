@@ -1,0 +1,5 @@
+direction_id,service_id,days,first_departure,last_departure,headway_min,end_to_end_min,source_category,source_id,status,verified_at,notes
+0,mrt6_sat_thu,saturday;sunday;monday;tuesday;wednesday;thursday,06:30,21:50,10,38,estimated,secondary_mrt_schedule,unverified,,"First/last departure from Uttara North and ~38 min run time as reported by secondary sites. Headway 10 min = upper end of the reported 5-10 min weekday range (conservative). Replace with the official DMTCL timetable when obtained."
+1,mrt6_sat_thu,saturday;sunday;monday;tuesday;wednesday;thursday,07:15,22:30,10,38,estimated,secondary_mrt_schedule,unverified,,"First/last departure from Motijheel as reported by secondary sites. Headway 10 min (conservative estimate)."
+0,mrt6_fri,friday,15:00,21:50,10,38,estimated,secondary_mrt_schedule,unverified,,"Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported)."
+1,mrt6_fri,friday,15:20,22:30,10,38,estimated,secondary_mrt_schedule,unverified,,"Friday afternoon start reported by secondary sites; last departure ASSUMED equal to Sat-Thu (not reported)."

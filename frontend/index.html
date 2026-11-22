@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhaka Transit — Open Public Transport Dataset &amp; Smart Route Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">DT</span>
+        <span>Dhaka Transit<span class="brand-sub">Open GTFS &amp; Multimodal Planner</span></span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav aria-label="Main navigation">
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="map.html" data-page="map">Map</a></li>
+          <li><a href="results.html" data-page="results">Route Planner</a></li>
+          <li><a href="dataset.html" data-page="dataset">Open Dataset</a></li>
+          <li><a href="about.html" data-page="about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-grid" aria-label="Route search and Dhaka transit map">
+      <div class="card">
+        <h1 class="hero-title">Plan your trip across Dhaka</h1>
+        <p class="hero-sub">
+          Open-source multimodal routing combining <strong>MRT Line 6</strong>, buses, and walking — powered by
+          <strong>RAPTOR</strong> and <strong>Dijkstra</strong> on a transparent GTFS dataset.
+        </p>
+
+        <form id="search-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="from-input">
+              <span>From (Origin)</span>
+              <button type="button" class="btn btn-sm btn-secondary" data-pick-map="from">Pick on map</button>
+            </label>
+            <input id="from-input" class="input" type="text" autocomplete="off"
+                   placeholder="e.g. Mirpur 10, মিরপুর-১০, or 23.808, 90.368" required />
+            <ul id="from-list" class="autocomplete-list" role="listbox" aria-label="Origin suggestions"></ul>
+          </div>
+
+          <div class="swap-row">
+            <button id="swap-btn" type="button" class="btn btn-sm btn-secondary" title="Swap origin and destination">⇅ Swap</button>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="to-input">
+              <span>To (Destination)</span>
+              <button type="button" class="btn btn-sm btn-secondary" data-pick-map="to">Pick on map</button>
+            </label>
+            <input id="to-input" class="input" type="text" autocomplete="off"
+                   placeholder="e.g. Motijheel, মতিঝিল, or Farmgate" required />
+            <ul id="to-list" class="autocomplete-list" role="listbox" aria-label="Destination suggestions"></ul>
+          </div>
+
+          <div class="input-row">
+            <div class="form-group">
+              <label class="form-label" for="date-input"><span>Date</span></label>
+              <input id="date-input" class="input" type="date" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="time-input"><span>Departure (optional)</span></label>
+              <input id="time-input" class="input" type="time" value="08:30" />
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="form-group">
+              <label class="form-label" for="algorithm-select"><span>Routing Engine</span></label>
+              <select id="algorithm-select" class="input">
+                <option value="combined">Combined (RAPTOR + Dijkstra)</option>
+                <option value="raptor">RAPTOR (Timetable / Pareto)</option>
+                <option value="dijkstra">Dijkstra (Frequency Graph)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <span class="form-label">Modes</span>
+              <div style="display:flex;gap:12px;padding-top:8px;font-size:0.88rem;">
+                <label><input type="checkbox" name="mode" value="metro" checked /> Metro</label>
+                <label><input type="checkbox" name="mode" value="bus" checked /> Bus</label>
+              </div>
+            </div>
+          </div>
+
+          <p id="pick-hint" class="notice-banner" hidden role="status"></p>
+          <p id="form-error" class="badge badge-error" style="display:block;padding:8px 12px;margin-bottom:10px;" hidden role="alert"></p>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Search Routes →</button>
+        </form>
+
+        <div class="preset-chips" aria-label="Sample journeys">
+          <button type="button" class="chip" data-from="mrt6_mirpur_10" data-to="mrt6_motijheel">Mirpur 10 → Motijheel</button>
+          <button type="button" class="chip" data-from="mrt6_uttara_north" data-to="mrt6_farmgate">Uttara North → Farmgate</button>
+          <button type="button" class="chip" data-from="mrt6_pallabi" data-to="mrt6_dhaka_university">Pallabi → Dhaka Univ.</button>
+          <button type="button" class="chip" data-from="mrt6_agargaon" data-to="mrt6_shahbagh">Agargaon → Shahbagh</button>
+        </div>
+      </div>
+
+      <div class="map-frame" aria-label="Interactive Dhaka transit map">
+        <div id="home-map" class="map-canvas"></div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Live dataset statistics">
+      <div class="stat-card">
+        <div id="stat-stations" class="stat-value">16</div>
+        <div class="stat-label">MRT Line 6 stations (Uttara North – Motijheel)</div>
+      </div>
+      <div class="stat-card">
+        <div id="stat-routes" class="stat-value">1</div>
+        <div class="stat-label">Validated GTFS transit routes (expandable)</div>
+      </div>
+      <div class="stat-card">
+        <div id="stat-osm" class="stat-value">1,023</div>
+        <div class="stat-label">Mapped OSM Dhaka bus stops (survey-ready)</div>
+      </div>
+      <div class="stat-card">
+        <div id="stat-nodes" class="stat-value">—</div>
+        <div class="stat-label">Multimodal routing graph nodes</div>
+      </div>
+    </section>
+
+    <section class="container" style="padding-top:0;">
+      <div class="features-grid">
+        <div class="card">
+          <h2 class="section-title">Transparent Provenance</h2>
+          <p class="muted">
+            Every stop, route, timetable, and fare carries an explicit origin badge
+            (<span class="badge badge-official">Official</span>,
+            <span class="badge badge-osm">OpenStreetMap</span>,
+            <span class="badge badge-community">Community</span>, or
+            <span class="badge badge-estimated">Estimated</span>). Missing bus routes or unverified fares are never fabricated.
+          </p>
+        </div>
+        <div class="card">
+          <h2 class="section-title">RAPTOR + Dijkstra</h2>
+          <p class="muted">
+            Compare calendar-aware, Pareto-optimal <strong>RAPTOR</strong> schedules (distinguishing Sat–Thu from Friday afternoon MRT-6 service) side-by-side against frequency-based <strong>Dijkstra</strong>.
+          </p>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Open Public Infrastructure</h2>
+          <p class="muted">
+            Download the validated <code>dhaka_gtfs.zip</code> under ODbL 1.0, inspect our gap report, or submit a field-surveyed bus route directly from the <a href="dataset.html">Open Dataset</a> page.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Dhaka Transit — Open-source CSE project · Code: MIT · Dataset: ODbL 1.0 · Map data &copy; OpenStreetMap contributors ·
+    <a href="/docs" target="_blank" rel="noopener">REST API Docs</a>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script type="module" src="js/search.js"></script>
+</body>
+</html>
